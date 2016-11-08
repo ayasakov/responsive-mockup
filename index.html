@@ -6,22 +6,34 @@
 
     <title>Responsive CSS</title>
 
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
-    <input id="toggle" type="checkbox">
-    <label for="toggle">Test Project last</label>
-    <div id="expand">
-        <section>
-            <span>Opened</span>
-        </section>
+    <div class="dropdown">
+        <input id="test-project-last" type="checkbox" class="dropdown__toggle dropdown__flag">
+        <label for="test-project-last" class="dropdown__label">Test Project last</label>
+        <div class="dropdown__expand">
+            <section>
+                <span>Opened</span>
+            </section>
+        </div>
     </div>
 
-    <a class="btn"> Expand All </a>
-    <a class="btn btn-with-icon btn-cut-right"> Export </a>
-    <a class="btn btn-with-icon btn-cut-right"> Filters </a>
+    <div class="dropdown">
+        <input id="test-project-last1" type="checkbox" class="dropdown__toggle dropdown__flag">
+        <label for="test-project-last1" class="dropdown__label">Test Project last</label>
+        <div class="dropdown__expand">
+            <section>
+                <span>Opened</span>
+            </section>
+        </div>
+    </div>
+
+    <a class="btn">Expand All</a>
+    <a class="btn">Export</a>
+    <a class="btn btn-cut-right"><i class="fa fa-filter" aria-required="true"></i> Filters</a>
 
 </body>
 </html>

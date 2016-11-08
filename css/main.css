@@ -1,0 +1,152 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+.btn {
+  background: #eeeeee;
+  background-image: -webkit-linear-gradient(top, #eeeeee, #e3e3e3);
+  background-image: -moz-linear-gradient(top, #eeeeee, #e3e3e3);
+  background-image: -ms-linear-gradient(top, #eeeeee, #e3e3e3);
+  background-image: -o-linear-gradient(top, #eeeeee, #e3e3e3);
+  background-image: linear-gradient(to bottom, #eeeeee, #e3e3e3);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1, StartColorStr=$top, EndColorStr=$end);
+  -webkit-border-radius: 7px 7px 7px 7px;
+  -moz-border-radius: 7px 7px 7px 7px;
+  -ms-border-radius: 7px 7px 7px 7px;
+  border-radius: 7px 7px 7px 7px;
+  color: #909090;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 5px 10px 5px 10px;
+  border: solid #d7d7d7 1px;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  margin: 20px; }
+
+.btn:hover {
+  background: #e3e3e3;
+  background-image: -webkit-linear-gradient(top, #e3e3e3, #eeeeee);
+  background-image: -moz-linear-gradient(top, #e3e3e3, #eeeeee);
+  background-image: -ms-linear-gradient(top, #e3e3e3, #eeeeee);
+  background-image: -o-linear-gradient(top, #e3e3e3, #eeeeee);
+  background-image: linear-gradient(to bottom, #e3e3e3, #eeeeee);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1, StartColorStr=$top, EndColorStr=$end); }
+
+.btn-cut-right {
+  -webkit-border-radius: 0 7px 7px 0;
+  -moz-border-radius: 0 7px 7px 0;
+  -ms-border-radius: 0 7px 7px 0;
+  border-radius: 0 7px 7px 0; }
+
+.btn-cut-right:before {
+  content: '';
+  width: 19px;
+  height: 18px;
+  background: #eeeeee;
+  background-image: -webkit-linear-gradient(top, #eeeeee, #e3e3e3);
+  background-image: -moz-linear-gradient(top, #eeeeee, #e3e3e3);
+  background-image: -ms-linear-gradient(top, #eeeeee, #e3e3e3);
+  background-image: -o-linear-gradient(top, #eeeeee, #e3e3e3);
+  background-image: linear-gradient(to bottom, #eeeeee, #e3e3e3);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1, StartColorStr=$top, EndColorStr=$end);
+  position: absolute;
+  left: -11px;
+  top: 3px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(4 45deg);
+  border-left: 1px solid #d7d7d7;
+  border-bottom: 1px solid #d7d7d7;
+  -webkit-border-radius: 0 0 0 5px;
+  -moz-border-radius: 0 0 0 5px;
+  -ms-border-radius: 0 0 0 5px;
+  border-radius: 0 0 0 5px;
+  z-index: 1; }
+
+.btn-cut-right:hover:before {
+  background: #e3e3e3;
+  background-image: -webkit-linear-gradient(top, #e3e3e3, #eeeeee);
+  background-image: -moz-linear-gradient(top, #e3e3e3, #eeeeee);
+  background-image: -ms-linear-gradient(top, #e3e3e3, #eeeeee);
+  background-image: -o-linear-gradient(top, #e3e3e3, #eeeeee);
+  background-image: linear-gradient(to bottom, #e3e3e3, #eeeeee);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1, StartColorStr=$top, EndColorStr=$end); }
+
+.dropdown__flag {
+  display: none;
+  visibility: hidden; }
+.dropdown__label {
+  display: block;
+  padding: 0.5em;
+  text-align: center;
+  color: #666; }
+.dropdown__label:hover {
+  color: #000; }
+.dropdown__label:after {
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 15px;
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 3px; }
+.dropdown__expand {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.5s;
+  -moz-transition: height 0.5s;
+  -ms-transition: height 0.5s;
+  -o-transition: height 0.5s;
+  transition: height 0.5s;
+  background: url("http://www.howwemadeitinafrica.com/wp-content/uploads/2015/11/Johannesburg-Sunrise-City-of-Gold-600x300-300x150.jpg") no-repeat;
+  color: #FFF; }
+.dropdown__toggle:checked + .dropdown__label:after {
+  content: "\f056"; }
+.dropdown__toggle:checked + .dropdown__label + .dropdown__expand {
+  height: 250px; }
+
+/*# sourceMappingURL=main.css.map */

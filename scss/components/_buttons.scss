@@ -1,0 +1,42 @@
+@import "../helpers/mixins";
+
+.btn {
+  @include btn-background(#eeeeee, #e3e3e3);
+  @include border-radius(7px, 7px, 7px, 7px);
+  color: #909090;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 5px 10px 5px 10px;
+  border: solid #d7d7d7 1px;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  margin: 20px;
+}
+
+.btn:hover {
+  @include btn-background(#e3e3e3, #eeeeee);
+}
+
+.btn-cut-right {
+  @include border-radius(0, 7px, 7px, 0);
+}
+
+.btn-cut-right:before{
+    content: '';
+    width: 19px;
+    height: 18px;
+    @include btn-background(#eeeeee, #e3e3e3);
+    position: absolute;
+    left: -11px;
+    top: 3px;
+    @include rotate(45deg);
+    border-left: 1px solid #d7d7d7;
+    border-bottom: 1px solid #d7d7d7;
+    @include border-radius(0, 0, 0, 5px);
+    z-index: 1;
+}
+
+.btn-cut-right:hover:before{
+  @include btn-background(#e3e3e3, #eeeeee);
+}

@@ -1,0 +1,41 @@
+@mixin border-radius($r1, $r2, $r3, $r4) {
+  -webkit-border-radius: $r1 $r2 $r3 $r4;
+     -moz-border-radius: $r1 $r2 $r3 $r4;
+      -ms-border-radius: $r1 $r2 $r3 $r4;
+          border-radius: $r1 $r2 $r3 $r4;
+}
+
+@mixin btn-background($top, $end) {
+  background: $top;
+  background-image: -webkit-linear-gradient(top, $top, $end);
+  background-image: -moz-linear-gradient(top, $top, $end);
+  background-image: -ms-linear-gradient(top, $top, $end);
+  background-image: -o-linear-gradient(top, $top, $end);
+  background-image: linear-gradient(to bottom, $top, $end);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1, StartColorStr=$top, EndColorStr=$end);
+}
+
+@mixin rotate($deg) {
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  transform: rotate(4$deg);
+}
+
+@mixin transition($option, $time) {
+  -webkit-transition: $option $time;
+  -moz-transition: $option $time;
+  -ms-transition: $option $time;
+  -o-transition: $option $time;
+  transition: $option $time;
+}
+
+@mixin insert-icon($icon) {
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 15px;
+  content: $icon;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 3px;
+}

@@ -1,0 +1,59 @@
+@import "../helpers/mixins";
+
+.tabs {
+  min-width: 320px;
+  padding: 0px;
+  margin: 0 auto;
+
+  &__section {
+    display: none;
+    background: #f3f3f3;
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__label {
+    display: inline-block;
+    margin: 0 0 -4px;
+    padding: 10px 25px;
+    font-weight: 600;
+    width: 50%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #aaa;
+    border: 1px solid #ddd;
+    background: #d9d9d9;
+    @include border-radius(10px, 10px, 0, 0)
+  }
+
+  &__label[for*="1"]:after {
+    @include insert-icon("\f024");
+    color: #ce0033;
+  }
+  &__label[for*="2"]:after {
+    @include insert-icon("\f095");
+    color: #ce0033;
+  }
+
+  &__label:hover {
+    color: #888;
+    cursor: pointer;
+  }
+
+  /* стили для активной вкладки */
+  &__input:checked + &__label {
+    color: #555;
+    border: 1px solid #ddd;
+    border-bottom: 1px solid #f3f3f3;
+    background: #f3f3f3;
+  }
+
+  /* активация секций с помощью переключателя :checked */
+  #tab1:checked ~ #content1,
+  #tab2:checked ~ #content2 {
+    display: block;
+  }
+
+}

@@ -8,8 +8,6 @@
 
   &__label {
     display: block;
-    padding: 0.5em;
-    text-align: center;
     color: #666;
   }
 
@@ -19,6 +17,7 @@
 
   &__label:after {
     @include insert-icon("\f055");
+    cursor: pointer;
   }
 
   &__expand {

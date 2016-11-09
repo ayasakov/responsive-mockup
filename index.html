@@ -11,29 +11,66 @@
 </head>
 <body>
 
-    <div class="dropdown">
-        <input id="test-project-last" type="checkbox" class="dropdown__toggle dropdown__flag">
-        <label for="test-project-last" class="dropdown__label">Test Project last</label>
-        <div class="dropdown__expand">
-            <section>
-                <span>Opened</span>
+    <header class="container">
+        Epam
+    </header>
+
+    <main class="container">
+        <section class="dropdown">
+            <input id="test-project-last" type="checkbox" class="dropdown__toggle dropdown__flag">
+            <label for="test-project-last" class="dropdown__label">Test Project last</label>
+            <div class="dropdown__expand">
+                <section>
+                    <span>Opened</span>
+                </section>
+            </div>
+        </section>
+
+        <div class="tabs">
+            <input id="tab1" type="radio" name="tabs" class="tabs__input" checked><!--
+            --><label for="tab1" title="Experts" class="tabs__label ellipsis">Experts</label><!--
+
+            --><input id="tab2" type="radio" name="tabs" class="tabs__input"><!--
+            --><label for="tab2" title="Consultations" class="tabs__label ellipsis">Consultations</label>
+
+            <section id="content1" class="tabs__section">
+                <div class="block"><!--
+                 --><div class="column">
+                        <a class="btn home-btn ellipsis">Expand All</a>
+                    </div><!--
+                 --><div class="column">
+                        <a class="btn home-btn ellipsis">Export</a>
+                    </div><!--
+                 --><div class="column">
+                        <a class="btn btn-cut-right home-btn ellipsis"><i class="fa fa-filter" aria-required="true"></i> Filters</a>
+                    </div><!--
+             --></div>
+                <div class="block">
+                    Industry expert
+                    <h1>Mikhail Semichev</h1>
+                    <h2>Epam <span>public</span></h2>
+                    <p>FE developer (12/01/11 - Present)</p>
+                    <p>Premium Rate: This Expert's</p>
+                </div>
+                <div class="block-links">
+                    <div class="col-3">
+                        <a class="home-btn">Decline</a>
+                        <a class="home-btn">Request Info</a>
+                        <a class="home-btn">Schedule</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="content2" class="tabs__section">
+                <div class="block">
+                    <p>Consultation block</p>
+                </div>
             </section>
         </div>
-    </div>
+    </main>
 
-    <div class="dropdown">
-        <input id="test-project-last1" type="checkbox" class="dropdown__toggle dropdown__flag">
-        <label for="test-project-last1" class="dropdown__label">Test Project last</label>
-        <div class="dropdown__expand">
-            <section>
-                <span>Opened</span>
-            </section>
-        </div>
-    </div>
-
-    <a class="btn">Expand All</a>
-    <a class="btn">Export</a>
-    <a class="btn btn-cut-right"><i class="fa fa-filter" aria-required="true"></i> Filters</a>
-
+    <footer class="container">
+        Footer
+    </footer>
 </body>
 </html>

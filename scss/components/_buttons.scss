@@ -2,7 +2,7 @@
 
 .btn {
   @include btn-background(#eeeeee, #e3e3e3);
-  @include border-radius(7px, 7px, 7px, 7px);
+  @include border-radius(5px, 5px, 5px, 5px);
   color: #909090;
   text-transform: uppercase;
   font-size: 14px;
@@ -11,7 +11,11 @@
   text-decoration: none;
   cursor: pointer;
   position: relative;
-  margin: 20px;
+  margin-left: 5px;
+}
+
+.btn:last-child {
+  margin-left: 0;
 }
 
 .btn:hover {
@@ -19,13 +23,13 @@
 }
 
 .btn-cut-right {
-  @include border-radius(0, 7px, 7px, 0);
+  @include border-radius(0, 5px, 5px, 0);
 }
 
 .btn-cut-right:before{
     content: '';
-    width: 19px;
-    height: 18px;
+    width: 18px;
+    height: 19px;
     @include btn-background(#eeeeee, #e3e3e3);
     position: absolute;
     left: -11px;
@@ -33,7 +37,6 @@
     @include rotate(45deg);
     border-left: 1px solid #d7d7d7;
     border-bottom: 1px solid #d7d7d7;
-    @include border-radius(0, 0, 0, 5px);
     z-index: 1;
 }
 

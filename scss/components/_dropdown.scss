@@ -8,24 +8,23 @@
 
   &__label {
     display: block;
-    color: #666;
-  }
+    color: #555;
 
-  &__label:hover {
-    color: #000;
-  }
+    &:hover {
+      color: #000;
+    }
 
-  &__label:after {
-    @include insert-icon("\f055");
-    cursor: pointer;
+    &:after {
+      margin-left: 5px;
+      @include insert-icon("\f055");
+      cursor: pointer;
+    }
   }
 
   &__expand {
     height: 0;
     overflow: hidden;
     @include transition(height, 0.5s);
-    background: url('http://www.howwemadeitinafrica.com/wp-content/uploads/2015/11/Johannesburg-Sunrise-City-of-Gold-600x300-300x150.jpg') no-repeat;
-    color: #FFF;
   }
 
   &__toggle:checked + &__label:after  {
@@ -33,7 +32,7 @@
   }
 
   &__toggle:checked + &__label + &__expand {
-    height: 250px;
+    height: 245px;
   }
 
 }

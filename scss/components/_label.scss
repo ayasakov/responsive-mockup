@@ -1,0 +1,30 @@
+@import "../helpers/mixins";
+
+.label {
+    display: inline;
+    padding: 2px 6px 2px;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    @include border-radius(5px, 5px, 5px, 5px);
+
+    border: 1px solid #ce0033;
+    text-transform: uppercase;
+}
+
+.label-default {
+  border: 1px solid #777;
+  background-color: #777;
+}
+
+.label-primary {
+  background-color: #ce0033;
+}
+
+.label-inverse {
+  color: #ce0033;
+}

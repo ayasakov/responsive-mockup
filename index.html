@@ -12,21 +12,64 @@
 <body>
 
     <header class="container">
-        Epam
+        <nav class="navbar">
+            <div class="navbar__wrap">
+                <a href="#" class="text-primary navbar__toogle">
+                    <i class="fa fa-bars" aria-required="true"></i>
+                </a>
+            </div>
+        </nav>
     </header>
 
     <main class="container">
-        <section class="dropdown">
+        <aside class="breadcrumb splitter">
+            <a href="#" class="text-inactive"><i class="fa fa-chevron-left" aria-required="true"></i> Project List</a>
+        </aside>
+        <section class="dropdown splitter">
             <input id="test-project-last" type="checkbox" class="dropdown__toggle dropdown__flag">
-            <label for="test-project-last" class="dropdown__label">Test Project last</label>
+            <label for="test-project-last" class="dropdown__label home-title">Test Project last</label>
             <div class="dropdown__expand">
-                <section>
-                    <span>Opened</span>
-                </section>
+                <div class="project_table__column">
+                    <div class="project-table__row"><!--
+                     --><div class="col-2">Create date</div><!--
+                     --><div class="col-2 pull-right">01/20/15</div><!--
+                 --></div>
+                    <div class="project-table__row"><!--
+                     --><div class="col-2">Target industries</div><!--
+                     --><div class="col-2 pull-right">Wireline Telephone Equipment</div><!--
+                 --></div>
+                    <div class="project-table__row"><!--
+                     --><div class="col-2">Bios sent</div><!--
+                     --><div class="col-2 pull-right">10</div><!--
+                 --></div>
+                    <div class="project-table__row"><!--
+                     --><div class="col-2">Calls scheduled</div><!--
+                     --><div class="col-2 pull-right">2</div><!--
+                 --></div>
+                </div>
+
+                <div class="project_table__column">
+                    <div class="project-table__row"><!--
+                     --><div class="col-2">Requested consultations</div><!--
+                     --><div class="col-2 pull-right">10</div><!--
+                 --></div>
+                    <div class="project-table__row"><!--
+                     --><div class="col-2">Target companies</div><!--
+                     --><div class="col-2 pull-right">Frontier Communicatoins Corporation [FTR]</div><!--
+                 --></div>
+                    <div class="project-table__row"><!--
+                     --><div class="col-2">Calls completed</div><!--
+                     --><div class="col-2 pull-right">2</div><!--
+                 --></div>
+                    <div class="project-table__row"><!--
+                     --><div class="col-2">Calls in scheduling</div><!--
+                     --><div class="col-2 pull-right">1</div><!--
+                 --></div>
+                </div>
             </div>
         </section>
 
-        <div class="tabs">
+        <div class="tabs splitter">
             <input id="tab1" type="radio" name="tabs" class="tabs__input" checked><!--
             --><label for="tab1" title="Experts" class="tabs__label ellipsis">Experts</label><!--
 
@@ -36,29 +79,96 @@
             <section id="content1" class="tabs__section">
                 <div class="block"><!--
                  --><div class="column">
-                        <a class="btn home-btn ellipsis">Expand All</a>
+                        <a href="#" class="btn home-btn ellipsis">Expand All</a>
                     </div><!--
                  --><div class="column">
-                        <a class="btn home-btn ellipsis">Export</a>
+                        <a href="#" class="btn home-btn ellipsis">Export</a>
                     </div><!--
                  --><div class="column">
-                        <a class="btn btn-cut-right home-btn ellipsis"><i class="fa fa-filter" aria-required="true"></i> Filters</a>
+                        <a href="#" class="btn btn-cut-right home-btn ellipsis"><i class="fa fa-filter" aria-required="true"></i> Filters</a>
                     </div><!--
              --></div>
+                <div class="block splitter">
+                    <div class="clearfix"><!--
+                     --><div class="col-2">
+                            <span class="text-primary area-title">Industry expert</span>
+                        </div><!--
+                     --><div class="col-2 pull-right">
+                            <time class="text-inactive">07/03/14</time> <span class="label label-primary">new</span>
+                        </div><!--
+                 --></div>
+                    <h2>Mikhail Semichev</h2>
+                    <h3>EPAM <span class="label label-inverse">public</span></h3>
+                    <p>FE developer <span class="text-inactive">(<time>12/01/11</time> - Present)</span></p>
+                    <p class="text-primary">Premium Rate: This Expert's hourly consulting rate exceeds our standart rate and would require an additional call debit.</p>
+                    <p class="text-primary">Translator Required: This Expert requires a translator, which we can coordinate for one additional call debit.</p>
+                </div>
                 <div class="block">
-                    Industry expert
-                    <h1>Mikhail Semichev</h1>
-                    <h2>Epam <span>public</span></h2>
-                    <p>FE developer (12/01/11 - Present)</p>
-                    <p>Premium Rate: This Expert's</p>
+                    <p class="text-primary article-title">Confirmed Availability</p>
+                    <p class="text-primary sub-title">Thusday 07/21/15 11:00 AM - 07:13 AM (UTC-05:00) Eastern Time (US & Canada)</p>
+                    <p class="text-primary sub-title">Monday 07/20/15 07:00 AM - 10:00 AM (UTC-05:00) Eastern Time (US & Canada)</p>
                 </div>
-                <div class="block-links">
-                    <div class="col-3">
-                        <a class="home-btn">Decline</a>
-                        <a class="home-btn">Request Info</a>
-                        <a class="home-btn">Schedule</a>
-                    </div>
+                <div class="block-links"><!--
+                 --><div class="block-links__column">
+                        <a href="#" class="block-links__link"><i class="fa fa-phone" aria-required="true"></i> Schedule</a>
+                    </div><!--
+                 --><div class="block-links__column">
+                        <a href="#" class="block-links__link"><i class="fa fa-info-circle" aria-required="true"></i> Request Info</a>
+                    </div><!--
+                 --><div class="block-links__column">
+                        <a href="#" class="block-links__link"><i class="fa fa-times" aria-required="true"></i> Decline</a>
+                    </div><!--
+             --></div>
+
+                <div class="block splitter">
+                    <div class="clearfix"><!--
+                     --><div class="col-2">
+                            <span class="text-primary area-title">Competitor</span>
+                        </div><!--
+                     --><div class="col-2 pull-right">
+                            <time class="text-inactive">01/01/14</time> <span class="label label-primary">new</span>
+                        </div><!--
+                 --></div>
+                    <h2>Mikhail Kuznetsov</h2>
+                    <h3>Yandex <span class="label label-inverse">public parent</span></h3>
+                    <p>FE developer <span class="text-inactive">(<time>12/01/11</time> - <time>06/05/13</time>)</span></p>
                 </div>
+                <div class="block-links"><!--
+                 --><div class="block-links__column">
+                        <a href="#" class="block-links__link"><i class="fa fa-phone" aria-required="true"></i> Schedule</a>
+                    </div><!--
+                 --><div class="block-links__column">
+                        <a href="#" class="block-links__link"><i class="fa fa-info-circle" aria-required="true"></i> Request Info</a>
+                    </div><!--
+                 --><div class="block-links__column">
+                        <a href="#" class="block-links__link"><i class="fa fa-times" aria-required="true"></i> Decline</a>
+                    </div><!--
+             --></div>
+
+                <div class="block splitter">
+                    <div class="clearfix"><!--
+                     --><div class="col-2">
+                            <span class="text-primary area-title">Customer</span>
+                        </div><!--
+                     --><div class="col-2 pull-right">
+                            <time class="text-inactive">03/21/15</time> <span class="label label-default">viewed</span>
+                        </div><!--
+                 --></div>
+                    <h2>Nikita Reshetnikov</h2>
+                    <h3>Google <span class="label label-inverse">public</span></h3>
+                    <p>FE developer <span class="text-inactive">(<time>12/01/11</time> - <time>06/05/13</time>)</span></p>
+                </div>
+                <div class="block-links"><!--
+                 --><div class="block-links__column">
+                        <a href="#" class="block-links__link"><i class="fa fa-phone" aria-required="true"></i> Schedule</a>
+                    </div><!--
+                 --><div class="block-links__column">
+                        <a href="#" class="block-links__link"><i class="fa fa-info-circle" aria-required="true"></i> Request Info</a>
+                    </div><!--
+                 --><div class="block-links__column">
+                        <a href="#" class="block-links__link"><i class="fa fa-times" aria-required="true"></i> Decline</a>
+                    </div><!--
+             --></div>
             </section>
 
             <section id="content2" class="tabs__section">
@@ -69,8 +179,5 @@
         </div>
     </main>
 
-    <footer class="container">
-        Footer
-    </footer>
 </body>
 </html>

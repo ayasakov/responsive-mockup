@@ -53,6 +53,24 @@ body {
 a {
   text-decoration: none; }
 
+h1 {
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: bold; }
+
+h2 {
+  font-size: 25px;
+  line-height: 40px;
+  font-weight: bold; }
+
+h3 {
+  font-size: 20px;
+  line-height: 35px;
+  font-weight: bold; }
+
+p {
+  line-height: 20px; }
+
 .btn {
   background: #eeeeee;
   background-image: -webkit-linear-gradient(top, #eeeeee, #e3e3e3);
@@ -129,18 +147,19 @@ a {
   visibility: hidden; }
 .dropdown__label {
   display: block;
-  color: #666; }
-.dropdown__label:hover {
-  color: #000; }
-.dropdown__label:after {
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: 15px;
-  content: "";
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin-right: 3px;
-  cursor: pointer; }
+  color: #555; }
+  .dropdown__label:hover {
+    color: #000; }
+  .dropdown__label:after {
+    margin-left: 5px;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 15px;
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 3px;
+    cursor: pointer; }
 .dropdown__expand {
   height: 0;
   overflow: hidden;
@@ -148,13 +167,48 @@ a {
   -moz-transition: height 0.5s;
   -ms-transition: height 0.5s;
   -o-transition: height 0.5s;
-  transition: height 0.5s;
-  background: url("http://www.howwemadeitinafrica.com/wp-content/uploads/2015/11/Johannesburg-Sunrise-City-of-Gold-600x300-300x150.jpg") no-repeat;
-  color: #FFF; }
+  transition: height 0.5s; }
 .dropdown__toggle:checked + .dropdown__label:after {
   content: "\f056"; }
 .dropdown__toggle:checked + .dropdown__label + .dropdown__expand {
-  height: 250px; }
+  height: 245px; }
+
+.label {
+  display: inline;
+  padding: 2px 6px 2px;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -ms-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  border: 1px solid #ce0033;
+  text-transform: uppercase; }
+
+.label-default {
+  border: 1px solid #777;
+  background-color: #777; }
+
+.label-primary {
+  background-color: #ce0033; }
+
+.label-inverse {
+  color: #ce0033; }
+
+.navbar {
+  height: 50px;
+  background: #fff url(../img/logo.jpg) 50% no-repeat;
+  background-size: auto 50px;
+  line-height: 50px; }
+  .navbar__wrap {
+    padding: 0 10px; }
+  .navbar__toogle {
+    font-size: 25px; }
 
 .tabs {
   min-width: 320px;
@@ -228,6 +282,18 @@ a {
 .clearfix:after {
   clear: both; }
 
+.splitter {
+  margin-top: 10px; }
+
+.pull-right {
+  text-align: right; }
+
+.text-inactive {
+  color: #9a9a9a; }
+
+.text-primary {
+  color: #ce0033; }
+
 .container {
   margin: 0 auto;
   width: 400px; }
@@ -237,20 +303,61 @@ a {
   display: inline-block;
   padding: 0 10px; }
 
+.col-2 {
+  width: 50%;
+  display: inline-block; }
+
 .block {
   border: 1px solid #ddd;
-  padding: 15px 0;
-  margin-top: 10px;
+  padding: 10px 10px;
   background: #fff; }
   .block:first-child {
-    margin-top: 0;
     background: #f3f3f3; }
 
 .block-links {
-  padding: 10px 0;
   color: #f3f3f3;
   border: 1px solid #ddd;
-  border-top: 0; }
+  border-top: 0;
+  direction: rtl; }
+  .block-links__column {
+    line-height: 30px;
+    direction: ltr;
+    border-bottom: 1px solid #ddd;
+    padding: 0 10px; }
+    .block-links__column:last-child {
+      border-bottom: 0; }
+  .block-links__link {
+    color: #555;
+    text-transform: uppercase;
+    font-size: 15px; }
+    .block-links__link:hover {
+      color: #000;
+      cursor: pointer; }
+
+.area-title {
+  font-size: 14px;
+  text-transform: uppercase; }
+
+.article-title {
+  text-decoration: underline; }
+
+.sub-title {
+  margin-left: 10px; }
+
+.home-title {
+  font-size: 24px; }
+
+.project-table__row {
+  line-height: 25px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 -1px; }
+  .project-table__row .col-2:first-child {
+    font-weight: bold; }
+  .project-table__row:last-child {
+    border-bottom: 0; }
 
 .home-btn {
   display: inline-block;

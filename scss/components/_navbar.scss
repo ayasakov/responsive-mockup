@@ -1,0 +1,14 @@
+.navbar {
+  height: 50px;
+  background: #fff url(../img/logo.jpg) 50% no-repeat;
+  background-size: auto 50px;
+  line-height: 50px;
+
+  &__wrap {
+    padding: 0 10px;
+  }
+
+  &__toogle {
+    font-size: 25px;
+  }
+}

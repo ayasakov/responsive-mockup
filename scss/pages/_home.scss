@@ -8,6 +8,11 @@
   }
 }
 
+.block-fluid {
+  @extend .block;
+  padding: 10px 0;
+}
+
 .block-links {
   color: #f3f3f3;
   border: 1px solid #ddd;
@@ -25,10 +30,30 @@
     }
   }
 
+  @media screen and (min-width: 600px) {
+    &__column {
+      width: 33.3%;
+      display: inline-block;
+      border: 0;
+      border-left: 1px solid #ddd;
+      text-align: center;
+
+      &:last-child {
+        border-left: 0;
+      }
+    }
+  }
+
   &__link {
     color: #555;
     text-transform: uppercase;
     font-size: 15px;
+
+    @media screen and (min-width: 600px) {
+      & {
+        font-size: 13px;
+      }
+    }
 
     &:hover {
       color: #000;
@@ -54,6 +79,15 @@
   font-size: 24px;
 }
 
+.excel-icon {
+  background: url(../img/excel.png);
+  background-size: 17px auto;
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
 .project-table {
   &__row {
     line-height: 25px;
@@ -69,6 +103,15 @@
 
     &:last-child {
       border-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    &__column {
+      width: 50%;
+      display: inline-block;
+      padding: 0 10px;
+      vertical-align: top;
     }
   }
 }

@@ -32,7 +32,15 @@
   }
 
   &__toggle:checked + &__label + &__expand {
-    height: 245px;
+    height: 255px;
+
+    @media screen and (min-width: 768px) {
+      height: 225px;
+    }
+
+    @media screen and (min-width: 920px) {
+      height: 180px;
+    }
   }
 
 }

@@ -1,14 +1,88 @@
 .navbar {
   height: 50px;
-  background: #fff url(../img/logo.jpg) 50% no-repeat;
-  background-size: auto 50px;
   line-height: 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
 
-  &__wrap {
+  @media screen and (min-width: 600px) {
+    height: 100px;
+    width: 200px;
+  }
+
+  &__nav-trigger {
+    display: none;
+    visibility: hidden;
+
+    &:checked ~ .navbar__menu {
+      left: 0px;
+    }
+  }
+
+  &__brand {
     padding: 0 10px;
+    height: 50px;
+    background: #fff url(../img/logo.jpg) 50% no-repeat;
+    background-size: auto 50px;
+    width: 100%;
+
+    @media screen and (min-width: 600px) {
+      & {
+        width: 200px;
+        height: 100px;
+        background-size: auto 80px;
+      }
+    }
   }
 
   &__toogle {
     font-size: 25px;
+
+    @media screen and (min-width: 600px) {
+      & {
+        display: none;
+      }
+    }
+  }
+
+  &__menu {
+    position: fixed;
+    top: 50px;
+    bottom: 0;
+    left: -200px;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    background: #393939;
+    color: #6f6f6f;
+
+    @include transition(left, 0.5s);
+
+    @media screen and (min-width: 600px) {
+      left: 0;
+      top: 100px;
+    }
+
+
+    &__side-nav li{
+      padding: 0 10px;
+      border-bottom: 1px solid #000;
+      text-transform: uppercase;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      &:hover {
+        cursor: pointer;
+        color: #cfcfcf;
+        background: #000;
+      }
+    }
+
+    &__side-nav li.active {
+      color: #cfcfcf;
+      background: #000;
+    }
   }
 }

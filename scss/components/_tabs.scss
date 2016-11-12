@@ -1,7 +1,6 @@
 @import "../helpers/mixins";
 
 .tabs {
-  min-width: 320px;
   padding: 0px;
   margin: 0 auto;
 
@@ -17,7 +16,7 @@
   &__label {
     display: inline-block;
     margin: 0 0 -4px;
-    padding: 10px 25px;
+    padding: 10px 10px;
     font-weight: 600;
     width: 50%;
     text-transform: uppercase;
@@ -26,15 +25,6 @@
     border: 1px solid #ddd;
     background: #d9d9d9;
     @include border-radius(10px, 10px, 0, 0)
-  }
-
-  &__label[for*="1"]:after {
-    @include insert-icon("\f024");
-    color: #ce0033;
-  }
-  &__label[for*="2"]:after {
-    @include insert-icon("\f095");
-    color: #ce0033;
   }
 
   &__label:hover {

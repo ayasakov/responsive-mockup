@@ -71,6 +71,11 @@ h3 {
 p {
   line-height: 20px; }
 
+input {
+  padding: 5px 10px;
+  line-height: 10px;
+  width: 100%; }
+
 .btn {
   background: #eeeeee;
   background-image: -webkit-linear-gradient(top, #eeeeee, #e3e3e3);
@@ -86,7 +91,8 @@ p {
   color: #909090;
   text-transform: uppercase;
   font-size: 14px;
-  padding: 5px 10px 5px 10px;
+  font-weight: 500;
+  padding: 10px;
   border: solid #d7d7d7 1px;
   text-decoration: none;
   cursor: pointer;
@@ -171,7 +177,13 @@ p {
 .dropdown__toggle:checked + .dropdown__label:after {
   content: "\f056"; }
 .dropdown__toggle:checked + .dropdown__label + .dropdown__expand {
-  height: 245px; }
+  height: 255px; }
+  @media screen and (min-width: 768px) {
+    .dropdown__toggle:checked + .dropdown__label + .dropdown__expand {
+      height: 225px; } }
+  @media screen and (min-width: 920px) {
+    .dropdown__toggle:checked + .dropdown__label + .dropdown__expand {
+      height: 180px; } }
 
 .label {
   display: inline;
@@ -202,16 +214,69 @@ p {
 
 .navbar {
   height: 50px;
-  background: #fff url(../img/logo.jpg) 50% no-repeat;
-  background-size: auto 50px;
-  line-height: 50px; }
-  .navbar__wrap {
-    padding: 0 10px; }
+  line-height: 50px;
+  position: fixed;
+  top: 0;
+  width: 100%; }
+  @media screen and (min-width: 600px) {
+    .navbar {
+      height: 100px;
+      width: 200px; } }
+  .navbar__nav-trigger {
+    display: none;
+    visibility: hidden; }
+    .navbar__nav-trigger:checked ~ .navbar__menu {
+      left: 0px; }
+  .navbar__brand {
+    padding: 0 10px;
+    height: 50px;
+    background: #fff url(../img/logo.jpg) 50% no-repeat;
+    background-size: auto 50px;
+    width: 100%; }
+    @media screen and (min-width: 600px) {
+      .navbar__brand {
+        width: 200px;
+        height: 100px;
+        background-size: auto 80px; } }
   .navbar__toogle {
     font-size: 25px; }
+    @media screen and (min-width: 600px) {
+      .navbar__toogle {
+        display: none; } }
+  .navbar__menu {
+    position: fixed;
+    top: 50px;
+    bottom: 0;
+    left: -200px;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    background: #393939;
+    color: #6f6f6f;
+    -webkit-transition: left 0.5s;
+    -moz-transition: left 0.5s;
+    -ms-transition: left 0.5s;
+    -o-transition: left 0.5s;
+    transition: left 0.5s; }
+    @media screen and (min-width: 600px) {
+      .navbar__menu {
+        left: 0;
+        top: 100px; } }
+    .navbar__menu__side-nav li {
+      padding: 0 10px;
+      border-bottom: 1px solid #000;
+      text-transform: uppercase; }
+      .navbar__menu__side-nav li:last-child {
+        border-bottom: 0; }
+      .navbar__menu__side-nav li:hover {
+        cursor: pointer;
+        color: #cfcfcf;
+        background: #000; }
+    .navbar__menu__side-nav li.active {
+      color: #cfcfcf;
+      background: #000; }
 
 .tabs {
-  min-width: 320px;
   padding: 0px;
   margin: 0 auto;
   /* стили для активной вкладки */
@@ -224,7 +289,7 @@ p {
   .tabs__label {
     display: inline-block;
     margin: 0 0 -4px;
-    padding: 10px 25px;
+    padding: 10px 10px;
     font-weight: 600;
     width: 50%;
     text-transform: uppercase;
@@ -236,24 +301,6 @@ p {
     -moz-border-radius: 10px 10px 0 0;
     -ms-border-radius: 10px 10px 0 0;
     border-radius: 10px 10px 0 0; }
-  .tabs__label[for*="1"]:after {
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: 15px;
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-right: 3px;
-    color: #ce0033; }
-  .tabs__label[for*="2"]:after {
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: 15px;
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-right: 3px;
-    color: #ce0033; }
   .tabs__label:hover {
     color: #888;
     cursor: pointer; }
@@ -294,25 +341,61 @@ p {
 .text-primary {
   color: #ce0033; }
 
-.container {
-  margin: 0 auto;
-  width: 400px; }
+.content {
+  display: inline-block;
+  margin-top: 50px; }
+  @media screen and (min-width: 600px) {
+    .content {
+      margin-top: 0;
+      width: 100%;
+      padding-left: 205px; } }
 
-.column {
+.container {
+  padding: 0 10px; }
+  @media screen and (min-width: 600px) {
+    .container {
+      max-width: 720px;
+      margin: 0 auto; } }
+
+.container-fluid {
+  padding: 0;
+  display: inline-block; }
+
+.column, .column-excel {
   width: 33.3%;
   display: inline-block;
-  padding: 0 10px; }
+  padding-left: 10px; }
+  .column:last-child, .column-excel:last-child {
+    padding-right: 10px; }
+  @media screen and (min-width: 600px) {
+    .column, .column-excel {
+      width: 25%; } }
+
+@media screen and (min-width: 600px) {
+  .column-excel {
+    display: none; } }
+
+.column-xs {
+  padding: 10px 10px 0; }
+  @media screen and (min-width: 600px) {
+    .column-xs {
+      padding: 0 10px;
+      width: 50%;
+      display: inline-block; } }
 
 .col-2 {
   width: 50%;
   display: inline-block; }
 
-.block {
+.block, .block-fluid {
   border: 1px solid #ddd;
   padding: 10px 10px;
   background: #fff; }
-  .block:first-child {
+  .block:first-child, .block-fluid:first-child {
     background: #f3f3f3; }
+
+.block-fluid {
+  padding: 10px 0; }
 
 .block-links {
   color: #f3f3f3;
@@ -326,10 +409,22 @@ p {
     padding: 0 10px; }
     .block-links__column:last-child {
       border-bottom: 0; }
+  @media screen and (min-width: 600px) {
+    .block-links__column {
+      width: 33.3%;
+      display: inline-block;
+      border: 0;
+      border-left: 1px solid #ddd;
+      text-align: center; }
+      .block-links__column:last-child {
+        border-left: 0; } }
   .block-links__link {
     color: #555;
     text-transform: uppercase;
     font-size: 15px; }
+    @media screen and (min-width: 600px) {
+      .block-links__link {
+        font-size: 13px; } }
     .block-links__link:hover {
       color: #000;
       cursor: pointer; }
@@ -347,6 +442,14 @@ p {
 .home-title {
   font-size: 24px; }
 
+.excel-icon {
+  background: url(../img/excel.png);
+  background-size: 17px auto;
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+  vertical-align: bottom; }
+
 .project-table__row {
   line-height: 25px;
   border-top: 1px solid #ddd;
@@ -358,6 +461,12 @@ p {
     font-weight: bold; }
   .project-table__row:last-child {
     border-bottom: 0; }
+@media screen and (min-width: 600px) {
+  .project-table__column {
+    width: 50%;
+    display: inline-block;
+    padding: 0 10px;
+    vertical-align: top; } }
 
 .home-btn {
   display: inline-block;

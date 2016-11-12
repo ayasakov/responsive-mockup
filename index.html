@@ -11,171 +11,197 @@
 </head>
 <body>
 
-    <header class="container">
+    <header>
         <nav class="navbar">
-            <div class="navbar__wrap">
-                <a href="#" class="text-primary navbar__toogle">
+            <div class="navbar__brand">
+                <label for="nav-trigger" class="text-primary navbar__toogle">
                     <i class="fa fa-bars" aria-required="true"></i>
-                </a>
+                </label>
+            </div>
+            <input type="checkbox" id="nav-trigger" class="navbar__nav-trigger" />
+            <div class="navbar__menu">
+                <ul class="navbar__menu__side-nav">
+                    <li>Expert search</li>
+                    <li>Saved Experts</li>
+                    <li class="active">Projects <i class="fa fa-flag text-primary" aria-required="true"></i></li>
+                    <li>Consultations <i class="fa fa-phone text-primary" aria-required="true"></i></li>
+                    <li>Events</li>
+                    <li><i class="fa fa-sign-out" aria-required="true"></i> Logout</li>
+                    <li>
+                        <p><i class="fa fa-user" aria-required="true"></i> Logged in as</p>
+                        <p>Girish Gapalan</p>
+                    </li>
+                </ul>
             </div>
         </nav>
     </header>
 
-    <main class="container">
-        <aside class="breadcrumb splitter">
-            <a href="#" class="text-inactive"><i class="fa fa-chevron-left" aria-required="true"></i> Project List</a>
-        </aside>
-        <section class="dropdown splitter">
-            <input id="test-project-last" type="checkbox" class="dropdown__toggle dropdown__flag">
-            <label for="test-project-last" class="dropdown__label home-title">Test Project last</label>
-            <div class="dropdown__expand">
-                <div class="project_table__column">
-                    <div class="project-table__row"><!--
-                     --><div class="col-2">Create date</div><!--
-                     --><div class="col-2 pull-right">01/20/15</div><!--
-                 --></div>
-                    <div class="project-table__row"><!--
-                     --><div class="col-2">Target industries</div><!--
-                     --><div class="col-2 pull-right">Wireline Telephone Equipment</div><!--
-                 --></div>
-                    <div class="project-table__row"><!--
-                     --><div class="col-2">Bios sent</div><!--
-                     --><div class="col-2 pull-right">10</div><!--
-                 --></div>
-                    <div class="project-table__row"><!--
-                     --><div class="col-2">Calls scheduled</div><!--
-                     --><div class="col-2 pull-right">2</div><!--
-                 --></div>
-                </div>
+    <main class="content">
+        <div class="container">
+            <aside class="breadcrumb splitter">
+                <a href="#" class="text-inactive"><i class="fa fa-chevron-left" aria-required="true"></i> Project List</a>
+            </aside>
+            <section class="dropdown splitter">
+                <input id="test-project-last" type="checkbox" class="dropdown__toggle dropdown__flag">
+                <label for="test-project-last" class="dropdown__label home-title">Test Project last</label>
+                <div class="dropdown__expand">
+                    <div class="project-table__column"><!--
+                     --><div class="project-table__row"><!--
+                         --><div class="col-2">Create date</div><!--
+                         --><div class="col-2 pull-right">01/20/15</div><!--
+                     --></div>
+                        <div class="project-table__row"><!--
+                         --><div class="col-2">Target industries</div><!--
+                         --><div class="col-2 pull-right">Wireline Telephone Equipment</div><!--
+                     --></div>
+                        <div class="project-table__row"><!--
+                         --><div class="col-2">Bios sent</div><!--
+                         --><div class="col-2 pull-right">10</div><!--
+                     --></div>
+                        <div class="project-table__row"><!--
+                         --><div class="col-2">Calls scheduled</div><!--
+                         --><div class="col-2 pull-right">2</div><!--
+                     --></div>
+                    </div><!--
 
-                <div class="project_table__column">
-                    <div class="project-table__row"><!--
-                     --><div class="col-2">Requested consultations</div><!--
-                     --><div class="col-2 pull-right">10</div><!--
+                 --><div class="project-table__column">
+                        <div class="project-table__row"><!--
+                         --><div class="col-2">Requested consultations</div><!--
+                         --><div class="col-2 pull-right">10</div><!--
+                     --></div>
+                        <div class="project-table__row"><!--
+                         --><div class="col-2">Target companies</div><!--
+                         --><div class="col-2 pull-right">Frontier Communicatoins Corporation [FTR]</div><!--
+                     --></div>
+                        <div class="project-table__row"><!--
+                         --><div class="col-2">Calls completed</div><!--
+                         --><div class="col-2 pull-right">2</div><!--
+                     --></div>
+                        <div class="project-table__row"><!--
+                         --><div class="col-2">Calls in scheduling</div><!--
+                         --><div class="col-2 pull-right">1</div><!--
+                     --></div>
+                    </div><!--
+             --></div>
+            </section>
+
+            <div class="tabs splitter">
+                <input id="tab1" type="radio" name="tabs" class="tabs__input" checked><!--
+                --><label for="tab1" title="Experts" class="tabs__label ellipsis">Experts <i class="fa fa-flag text-primary" aria-required="true"></i></label><!--
+
+                --><input id="tab2" type="radio" name="tabs" class="tabs__input"><!--
+                --><label for="tab2" title="Consultations" class="tabs__label ellipsis">Consultations <i class="fa fa-phone text-primary" aria-required="true"></i></label>
+
+                <section id="content1" class="tabs__section">
+                    <div class="block-fluid"><!--
+                     --><div class="column">
+                            <a href="#" class="btn home-btn ellipsis">Expand All</a>
+                        </div><!--
+                     --><div class="column-excel">
+                            <a href="#" class="btn home-btn ellipsis"><i class="excel-icon" aria-required="true"></i> Export</a>
+                        </div><!--
+                     --><div class="column">
+                            <a href="#" class="btn btn-cut-right home-btn ellipsis"><i class="fa fa-filter" aria-required="true"></i> Filters</a>
+                        </div><!--
+                     --><div class="column-xs">
+                            <input title="Sort by status" placeholder="Sort by status" list="search" />
+                            <datalist id="search">
+                              <option value="New">
+                              <option value="Viewed">
+                            </datalist>
+                        </div><!--
                  --></div>
-                    <div class="project-table__row"><!--
-                     --><div class="col-2">Target companies</div><!--
-                     --><div class="col-2 pull-right">Frontier Communicatoins Corporation [FTR]</div><!--
+                    <div class="block splitter">
+                        <div class="clearfix"><!--
+                         --><div class="col-2">
+                                <span class="text-primary area-title">Industry expert</span>
+                            </div><!--
+                         --><div class="col-2 pull-right">
+                                <time class="text-inactive">07/03/14</time> <span class="label label-primary">new</span>
+                            </div><!--
+                     --></div>
+                        <h2>Mikhail Semichev</h2>
+                        <h3>EPAM <span class="label label-inverse">public</span></h3>
+                        <p>FE developer <span class="text-inactive">(<time>12/01/11</time> - Present)</span></p>
+                        <p class="text-primary">Premium Rate: This Expert's hourly consulting rate exceeds our standart rate and would require an additional call debit.</p>
+                        <p class="text-primary">Translator Required: This Expert requires a translator, which we can coordinate for one additional call debit.</p>
+                    </div>
+                    <div class="block">
+                        <p class="text-primary article-title">Confirmed Availability</p>
+                        <p class="text-primary sub-title">Thusday 07/21/15 11:00 AM - 07:13 AM (UTC-05:00) Eastern Time (US & Canada)</p>
+                        <p class="text-primary sub-title">Monday 07/20/15 07:00 AM - 10:00 AM (UTC-05:00) Eastern Time (US & Canada)</p>
+                    </div>
+                    <div class="block-links"><!--
+                     --><div class="block-links__column">
+                            <a href="#" class="block-links__link"><i class="fa fa-phone" aria-required="true"></i> Schedule</a>
+                        </div><!--
+                     --><div class="block-links__column">
+                            <a href="#" class="block-links__link"><i class="fa fa-info-circle" aria-required="true"></i> Request Info</a>
+                        </div><!--
+                     --><div class="block-links__column">
+                            <a href="#" class="block-links__link"><i class="fa fa-times" aria-required="true"></i> Decline</a>
+                        </div><!--
                  --></div>
-                    <div class="project-table__row"><!--
-                     --><div class="col-2">Calls completed</div><!--
-                     --><div class="col-2 pull-right">2</div><!--
+
+                    <div class="block splitter">
+                        <div class="clearfix"><!--
+                         --><div class="col-2">
+                                <span class="text-primary area-title">Competitor</span>
+                            </div><!--
+                         --><div class="col-2 pull-right">
+                                <time class="text-inactive">01/01/14</time> <span class="label label-primary">new</span>
+                            </div><!--
+                     --></div>
+                        <h2>Mikhail Kuznetsov</h2>
+                        <h3>Yandex <span class="label label-inverse">public parent</span></h3>
+                        <p>FE developer <span class="text-inactive">(<time>12/01/11</time> - <time>06/05/13</time>)</span></p>
+                    </div>
+                    <div class="block-links"><!--
+                     --><div class="block-links__column">
+                            <a href="#" class="block-links__link"><i class="fa fa-phone" aria-required="true"></i> Schedule</a>
+                        </div><!--
+                     --><div class="block-links__column">
+                            <a href="#" class="block-links__link"><i class="fa fa-info-circle" aria-required="true"></i> Request Info</a>
+                        </div><!--
+                     --><div class="block-links__column">
+                            <a href="#" class="block-links__link"><i class="fa fa-times" aria-required="true"></i> Decline</a>
+                        </div><!--
                  --></div>
-                    <div class="project-table__row"><!--
-                     --><div class="col-2">Calls in scheduling</div><!--
-                     --><div class="col-2 pull-right">1</div><!--
+
+                    <div class="block splitter">
+                        <div class="clearfix"><!--
+                         --><div class="col-2">
+                                <span class="text-primary area-title">Customer</span>
+                            </div><!--
+                         --><div class="col-2 pull-right">
+                                <time class="text-inactive">03/21/15</time> <span class="label label-default">viewed</span>
+                            </div><!--
+                     --></div>
+                        <h2>Nikita Reshetnikov</h2>
+                        <h3>Google <span class="label label-inverse">public</span></h3>
+                        <p>FE developer <span class="text-inactive">(<time>12/01/11</time> - <time>06/05/13</time>)</span></p>
+                    </div>
+                    <div class="block-links"><!--
+                     --><div class="block-links__column">
+                            <a href="#" class="block-links__link"><i class="fa fa-phone" aria-required="true"></i> Schedule</a>
+                        </div><!--
+                     --><div class="block-links__column">
+                            <a href="#" class="block-links__link"><i class="fa fa-info-circle" aria-required="true"></i> Request Info</a>
+                        </div><!--
+                     --><div class="block-links__column">
+                            <a href="#" class="block-links__link"><i class="fa fa-times" aria-required="true"></i> Decline</a>
+                        </div><!--
                  --></div>
-                </div>
+
+                    <div class="splitter"></div>
+                </section>
+
+                <section id="content2" class="tabs__section">
+                    <div class="block">
+                        <p>Consultation block</p>
+                    </div>
+                </section>
             </div>
-        </section>
-
-        <div class="tabs splitter">
-            <input id="tab1" type="radio" name="tabs" class="tabs__input" checked><!--
-            --><label for="tab1" title="Experts" class="tabs__label ellipsis">Experts</label><!--
-
-            --><input id="tab2" type="radio" name="tabs" class="tabs__input"><!--
-            --><label for="tab2" title="Consultations" class="tabs__label ellipsis">Consultations</label>
-
-            <section id="content1" class="tabs__section">
-                <div class="block"><!--
-                 --><div class="column">
-                        <a href="#" class="btn home-btn ellipsis">Expand All</a>
-                    </div><!--
-                 --><div class="column">
-                        <a href="#" class="btn home-btn ellipsis">Export</a>
-                    </div><!--
-                 --><div class="column">
-                        <a href="#" class="btn btn-cut-right home-btn ellipsis"><i class="fa fa-filter" aria-required="true"></i> Filters</a>
-                    </div><!--
-             --></div>
-                <div class="block splitter">
-                    <div class="clearfix"><!--
-                     --><div class="col-2">
-                            <span class="text-primary area-title">Industry expert</span>
-                        </div><!--
-                     --><div class="col-2 pull-right">
-                            <time class="text-inactive">07/03/14</time> <span class="label label-primary">new</span>
-                        </div><!--
-                 --></div>
-                    <h2>Mikhail Semichev</h2>
-                    <h3>EPAM <span class="label label-inverse">public</span></h3>
-                    <p>FE developer <span class="text-inactive">(<time>12/01/11</time> - Present)</span></p>
-                    <p class="text-primary">Premium Rate: This Expert's hourly consulting rate exceeds our standart rate and would require an additional call debit.</p>
-                    <p class="text-primary">Translator Required: This Expert requires a translator, which we can coordinate for one additional call debit.</p>
-                </div>
-                <div class="block">
-                    <p class="text-primary article-title">Confirmed Availability</p>
-                    <p class="text-primary sub-title">Thusday 07/21/15 11:00 AM - 07:13 AM (UTC-05:00) Eastern Time (US & Canada)</p>
-                    <p class="text-primary sub-title">Monday 07/20/15 07:00 AM - 10:00 AM (UTC-05:00) Eastern Time (US & Canada)</p>
-                </div>
-                <div class="block-links"><!--
-                 --><div class="block-links__column">
-                        <a href="#" class="block-links__link"><i class="fa fa-phone" aria-required="true"></i> Schedule</a>
-                    </div><!--
-                 --><div class="block-links__column">
-                        <a href="#" class="block-links__link"><i class="fa fa-info-circle" aria-required="true"></i> Request Info</a>
-                    </div><!--
-                 --><div class="block-links__column">
-                        <a href="#" class="block-links__link"><i class="fa fa-times" aria-required="true"></i> Decline</a>
-                    </div><!--
-             --></div>
-
-                <div class="block splitter">
-                    <div class="clearfix"><!--
-                     --><div class="col-2">
-                            <span class="text-primary area-title">Competitor</span>
-                        </div><!--
-                     --><div class="col-2 pull-right">
-                            <time class="text-inactive">01/01/14</time> <span class="label label-primary">new</span>
-                        </div><!--
-                 --></div>
-                    <h2>Mikhail Kuznetsov</h2>
-                    <h3>Yandex <span class="label label-inverse">public parent</span></h3>
-                    <p>FE developer <span class="text-inactive">(<time>12/01/11</time> - <time>06/05/13</time>)</span></p>
-                </div>
-                <div class="block-links"><!--
-                 --><div class="block-links__column">
-                        <a href="#" class="block-links__link"><i class="fa fa-phone" aria-required="true"></i> Schedule</a>
-                    </div><!--
-                 --><div class="block-links__column">
-                        <a href="#" class="block-links__link"><i class="fa fa-info-circle" aria-required="true"></i> Request Info</a>
-                    </div><!--
-                 --><div class="block-links__column">
-                        <a href="#" class="block-links__link"><i class="fa fa-times" aria-required="true"></i> Decline</a>
-                    </div><!--
-             --></div>
-
-                <div class="block splitter">
-                    <div class="clearfix"><!--
-                     --><div class="col-2">
-                            <span class="text-primary area-title">Customer</span>
-                        </div><!--
-                     --><div class="col-2 pull-right">
-                            <time class="text-inactive">03/21/15</time> <span class="label label-default">viewed</span>
-                        </div><!--
-                 --></div>
-                    <h2>Nikita Reshetnikov</h2>
-                    <h3>Google <span class="label label-inverse">public</span></h3>
-                    <p>FE developer <span class="text-inactive">(<time>12/01/11</time> - <time>06/05/13</time>)</span></p>
-                </div>
-                <div class="block-links"><!--
-                 --><div class="block-links__column">
-                        <a href="#" class="block-links__link"><i class="fa fa-phone" aria-required="true"></i> Schedule</a>
-                    </div><!--
-                 --><div class="block-links__column">
-                        <a href="#" class="block-links__link"><i class="fa fa-info-circle" aria-required="true"></i> Request Info</a>
-                    </div><!--
-                 --><div class="block-links__column">
-                        <a href="#" class="block-links__link"><i class="fa fa-times" aria-required="true"></i> Decline</a>
-                    </div><!--
-             --></div>
-            </section>
-
-            <section id="content2" class="tabs__section">
-                <div class="block">
-                    <p>Consultation block</p>
-                </div>
-            </section>
         </div>
     </main>
 

@@ -1,12 +1,66 @@
+.content {
+  display: inline-block;
+  margin-top: 50px;
+
+  @media screen and (min-width: 600px) {
+    margin-top: 0;
+    width: 100%;
+    padding-left: 205px;
+  }
+}
+
 .container {
-  margin: 0 auto;
-  width: 400px;
+  padding: 0 10px;
+
+  @media screen and (min-width: 600px){
+    & {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.container-fluid {
+  padding: 0;
+  display: inline-block;
 }
 
 .column {
   width: 33.3%;
   display: inline-block;
-  padding: 0 10px;
+  padding-left: 10px;
+
+  &:last-child {
+    padding-right: 10px;
+  }
+
+  @media screen and (min-width: 600px) {
+    & {
+      width: 25%;
+    }
+  }
+}
+
+.column-excel {
+  @extend .column;
+
+  @media screen and (min-width: 600px) {
+    & {
+      display: none;
+    }
+  }
+}
+
+.column-xs {
+  padding: 10px 10px 0;
+
+  @media screen and (min-width: 600px) {
+    & {
+      padding: 0 10px;
+      width: 50%;
+      display: inline-block;
+    }
+  }
 }
 
 .col-2 {

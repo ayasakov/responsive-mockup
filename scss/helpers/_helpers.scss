@@ -1,3 +1,5 @@
+@import "variables";
+
 .ellipsis {
     -ms-text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
@@ -26,9 +28,9 @@
 }
 
 .text-inactive {
-  color: #9a9a9a;
+  color: $default-color;
 }
 
 .text-primary {
-  color: #ce0033;
+  color: $primary-color;
 }

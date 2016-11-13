@@ -1,4 +1,5 @@
 @import "../helpers/mixins";
+@import "../helpers/helpers";
 
 .label {
     display: inline;
@@ -6,25 +7,25 @@
     font-size: 75%;
     font-weight: 700;
     line-height: 1;
-    color: #fff;
+    color: $label-text-color;
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
     @include border-radius(5px, 5px, 5px, 5px);
 
-    border: 1px solid #ce0033;
+    border: 1px solid $label-primary-color;
     text-transform: uppercase;
 }
 
 .label-default {
-  border: 1px solid #777;
-  background-color: #777;
+  border: 1px solid $label-default-color;
+  background-color: $label-default-color;
 }
 
 .label-primary {
-  background-color: #ce0033;
+  background-color: $label-primary-color;
 }
 
 .label-inverse {
-  color: #ce0033;
+  color: $label-primary-color;
 }

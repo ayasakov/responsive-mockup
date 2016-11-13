@@ -1,10 +1,12 @@
+@import "../helpers/variables";
+
 .block {
-  border: 1px solid #ddd;
+  border: 1px solid $home-page-border-color;
   padding: 10px 10px;
-  background: #fff;
+  background: $block-background-color;
 
   &:first-child {
-    background: #f3f3f3;
+    background: $background-color;
   }
 }
 
@@ -13,16 +15,22 @@
   padding: 10px 0;
 }
 
+.block-flex {
+  @extend .block;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .block-links {
-  color: #f3f3f3;
-  border: 1px solid #ddd;
+  color: $block-text-color;
+  border: 1px solid $home-page-border-color;
   border-top: 0;
   direction: rtl;
 
   &__column {
     line-height: 30px;
     direction: ltr;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid $home-page-border-color;
     padding: 0 10px;
 
     &:last-child {
@@ -30,12 +38,12 @@
     }
   }
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: $tablet-min-width) {
     &__column {
       width: 33.3%;
       display: inline-block;
       border: 0;
-      border-left: 1px solid #ddd;
+      border-left: 1px solid $home-page-border-color;
       text-align: center;
 
       &:last-child {
@@ -45,18 +53,18 @@
   }
 
   &__link {
-    color: #555;
+    color: $block-link-text-color;
     text-transform: uppercase;
     font-size: 15px;
 
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: $tablet-min-width) {
       & {
         font-size: 13px;
       }
     }
 
     &:hover {
-      color: #000;
+      color: $block-active-link-text-color;
       cursor: pointer;
     }
   }
@@ -76,23 +84,44 @@
 }
 
 .home-title {
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .excel-icon {
   background: url(../img/excel.png);
-  background-size: 17px auto;
-  width: 17px;
-  height: 17px;
+  background-size: 14px auto;
+  width: 14px;
+  height: 14px;
   display: inline-block;
   vertical-align: bottom;
+}
+
+.column-excel-xs {
+  flex: 0 0 33.3%;
+  padding: 0 10px;
+
+  @media screen and (min-width: $tablet-min-width) {
+    & {
+      display: none;
+    }
+  }
+}
+
+.column-excel-md {
+  display: none;
+
+  @media screen and (min-width: $tablet-min-width) {
+    & {
+      display: inline-block;
+    }
+  }
 }
 
 .project-table {
   &__row {
     line-height: 25px;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
+    border-top: 1px solid $home-page-border-color;
+    border-bottom: 1px solid $home-page-border-color;
     display: inline-block;
     width: 100%;
     margin: 0 0 -1px;
@@ -106,7 +135,7 @@
     }
   }
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: $tablet-min-width) {
     &__column {
       width: 50%;
       display: inline-block;
@@ -120,4 +149,33 @@
   display: inline-block;
   width: 100%;
   text-align: center;
+}
+
+.flex-item-1 {
+
+  @media screen and (min-width: $tablet-min-width) {
+    & {
+      order: 0;
+    }
+  }
+}
+
+.flex-item-2 {
+  @media screen and (min-width: $tablet-min-width) {
+    & {
+      order: 1;
+    }
+  }
+}
+
+.flex-item-3 {
+  @media screen and (min-width: $tablet-min-width) {
+    & {
+      order: 2;
+    }
+  }
+}
+
+.input-search {
+  line-height: 23px;
 }

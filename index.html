@@ -43,7 +43,10 @@
             </aside>
             <section class="dropdown splitter">
                 <input id="test-project-last" type="checkbox" class="dropdown__toggle dropdown__flag">
-                <label for="test-project-last" class="dropdown__label home-title">Test Project last</label>
+                <label for="test-project-last" class="dropdown__label home-title col-2">Test Project last</label><!--
+             --><div class="column-excel-md col-2 pull-right">
+                    <a href="#" class="btn btn-excel-md"><i class="excel-icon" aria-required="true"></i> Export</a>
+                </div>
                 <div class="dropdown__expand">
                     <div class="project-table__column"><!--
                      --><div class="project-table__row"><!--
@@ -93,18 +96,20 @@
                 --><label for="tab2" title="Consultations" class="tabs__label ellipsis">Consultations <i class="fa fa-phone text-primary" aria-required="true"></i></label>
 
                 <section id="content1" class="tabs__section">
-                    <div class="block-fluid"><!--
-                     --><div class="column">
+                    <div class="block-flex"><!--
+                     --><div class="column flex-item-1">
                             <a href="#" class="btn home-btn ellipsis">Expand All</a>
                         </div><!--
-                     --><div class="column-excel">
+                     --><div class="column-excel-xs">
                             <a href="#" class="btn home-btn ellipsis"><i class="excel-icon" aria-required="true"></i> Export</a>
                         </div><!--
-                     --><div class="column">
-                            <a href="#" class="btn btn-cut-right home-btn ellipsis"><i class="fa fa-filter" aria-required="true"></i> Filters</a>
+                     --><div class="column flex-item-3">
+                            <div class="btn-chevron-right">
+                                <a href="#" class="btn btn-cut-right home-btn ellipsis"><i class="fa fa-filter" aria-required="true"></i> Filters</a>
+                            </div>
                         </div><!--
-                     --><div class="column-xs">
-                            <input title="Sort by status" placeholder="Sort by status" list="search" />
+                     --><div class="column-xs flex-item-2">
+                            <input title="Sort by status" placeholder="Sort by status" list="search" class="input-search" />
                             <datalist id="search">
                               <option value="New">
                               <option value="Viewed">

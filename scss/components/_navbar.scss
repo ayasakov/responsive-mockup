@@ -1,3 +1,5 @@
+@import "../helpers/variables";
+
 .navbar {
   height: 50px;
   line-height: 50px;
@@ -5,7 +7,7 @@
   top: 0;
   width: 100%;
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: $tablet-min-width) {
     height: 100px;
     width: 200px;
   }
@@ -22,11 +24,11 @@
   &__brand {
     padding: 0 10px;
     height: 50px;
-    background: #fff url(../img/logo.jpg) 50% no-repeat;
+    background: $navbar-background-color url(../img/logo.jpg) 50% no-repeat;
     background-size: auto 50px;
     width: 100%;
 
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: $tablet-min-width) {
       & {
         width: 200px;
         height: 100px;
@@ -38,7 +40,7 @@
   &__toogle {
     font-size: 25px;
 
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: $tablet-min-width) {
       & {
         display: none;
       }
@@ -53,12 +55,12 @@
     right: 0;
     width: 200px;
     height: 100%;
-    background: #393939;
-    color: #6f6f6f;
+    background: $menu-background-color;
+    color: $menu-item-text-color;
 
     @include transition(left, 0.5s);
 
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: $tablet-min-width) {
       left: 0;
       top: 100px;
     }
@@ -66,7 +68,7 @@
 
     &__side-nav li{
       padding: 0 10px;
-      border-bottom: 1px solid #000;
+      border-bottom: 1px solid $menu-item-border-color;
       text-transform: uppercase;
 
       &:last-child {
@@ -75,14 +77,14 @@
 
       &:hover {
         cursor: pointer;
-        color: #cfcfcf;
-        background: #000;
+        color: $menu-active-item-text-color;
+        background: $menu-active-item-background-color;
       }
     }
 
     &__side-nav li.active {
-      color: #cfcfcf;
-      background: #000;
+      color: $menu-active-item-text-color;
+      background: $menu-active-item-background-color;
     }
   }
 }

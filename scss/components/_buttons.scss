@@ -1,46 +1,58 @@
 @import "../helpers/mixins";
+@import "../helpers/variables";
 
 .btn {
-  @include btn-background(#eeeeee, #e3e3e3);
+  @include btn-background($btn-start-color-default, $btn-end-color-default);
   @include border-radius(5px, 5px, 5px, 5px);
-  color: #909090;
+  color: $btn-text-color-default;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
-  padding: 10px;
-  border: solid #d7d7d7 1px;
+  padding: 10px 0;
+  border: 1px solid $btn-border-color-default;
   text-decoration: none;
   cursor: pointer;
-  position: relative;
-  margin-left: 5px;
+
+  &:last-child {
+    margin-left: 0;
+  }
+
+  &:hover {
+    @include btn-background($btn-end-color-default, $btn-start-color-default);
+  }
 }
 
-.btn:last-child {
-  margin-left: 0;
-}
-
-.btn:hover {
-  @include btn-background(#e3e3e3, #eeeeee);
-}
 
 .btn-cut-right {
   @include border-radius(0, 5px, 5px, 0);
+  border-left: 0;
+  z-index: 5  ;
+  position: relative;
 }
 
-.btn-cut-right:before{
+.btn-chevron-right {
+  padding-left: 20px;
+  position: relative;
+
+  &:before {
     content: '';
-    width: 18px;
-    height: 19px;
-    @include btn-background(#eeeeee, #e3e3e3);
+    width: 25px;
+    height: 25px;
+    @include btn-background($btn-start-color-default, $btn-end-color-default);
     position: absolute;
-    left: -11px;
-    top: 3px;
+    left: 8px;
+    top: 5px;
     @include rotate(45deg);
-    border-left: 1px solid #d7d7d7;
-    border-bottom: 1px solid #d7d7d7;
-    z-index: 1;
+    border-left: 1px solid $btn-border-color-default;
+    border-bottom: 1px solid $btn-border-color-default;
+    z-index: 0;
+  }
+
+  &:hover:before {
+    @include btn-background($btn-end-color-default, $btn-start-color-default);
+  }
 }
 
-.btn-cut-right:hover:before{
-  @include btn-background(#e3e3e3, #eeeeee);
+.btn-excel-md {
+  padding: 10px 20px;
 }

@@ -83,6 +83,7 @@ p {
 input {
   padding: 5px 10px;
   line-height: 10px;
+  border: 1px solid #ddd;
   width: 100%; }
 
 /* General colors */
@@ -295,7 +296,8 @@ input {
   line-height: 50px;
   position: fixed;
   top: 0;
-  width: 100%; }
+  width: 100%;
+  z-index: 10; }
   @media screen and (min-width: 620px) {
     .navbar {
       height: 100px;
@@ -609,6 +611,6 @@ input {
     order: 2; } }
 
 .input-search {
-  line-height: 23px; }
+  line-height: 25px; }
 
 /*# sourceMappingURL=main.css.map */
